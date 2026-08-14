@@ -10,16 +10,25 @@ public:
         // }
         // return false;
 
-        map<int,int>mpp;
+        // map<int,int>mpp;
+        // for(int x:nums){
+        //     mpp[x]++;
+        // }
+        // for(auto it:mpp){
+        //     if(it.second>=2){
+        //         return true;
+        //     }
+        // }
+        // return false;
+
+        set<int>st;
         for(int x:nums){
-            mpp[x]++;
+            st.insert(x);
         }
-        for(auto it:mpp){
-            if(it.second>=2){
-                return true;
-            }
+        if(st.size()==nums.size()){
+            return false;
         }
-        return false;
+        return true;
 
     }
 };
